@@ -35,7 +35,7 @@ class Start:
         file_size = size # size of the file to download in MB
         download_speed = speed # download speed in MB/s
         download_time = file_size / download_speed # time to download in seconds
-        progress_bar_width = 30 # width of the progress bar in characters    
+        progress_bar_width = 25 # width of the progress bar in characters    
         print(f"\n\n\t{colors.rst}{start_text}")
         start_time = time.time() # record the start time
         elapsed_time = 0
@@ -48,7 +48,7 @@ class Start:
 
     def init_check():
         used = []
-        print("|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|")
+        print("|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|")
         for i in range(5):
             import random
             name_ = random.choice(Start.bullshit_text)
@@ -63,7 +63,7 @@ class Start:
                 e,
                 si,
                 sp,
-                'O',
-                '_'
+                '×',
+                '⋄'
             )
-        print("\n\n|__________________________________________________________________|")
+        print("\n\n|________________________________________________________|")

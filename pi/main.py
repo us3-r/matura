@@ -25,11 +25,10 @@ def get_video(select :str):
     #print(path)
     if path is not None: 
         video_running = True
-        os.system(f"vlc --play-and-exit {path}")
-        time.sleep(10)
+        os.system(f"vlc --play-and-exit --fullscreen --loop {path}")
         video_running = False
 
-#Start.init_check()
+Start.init_check()
 
 while True:
     if not video_running:
