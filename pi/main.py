@@ -23,6 +23,7 @@ def get_video(select :str):
     path = f"/home/pi/matura/anim/{select}.mp4" if select in gate_list else None
     #print(path)
     if path is not None: 
+        video_running = True
         os.system(f"vlc --play-and-exit {path}")
         time.sleep(10)
         video_running = False
@@ -39,6 +40,6 @@ while True:
             log_rep = f"[ at {ct} ]\nSerial data: {ser}\nDecoded message: {message}\n"
             with open("log.log", "a") as file:
                 file.write(log_rep)
-            video_running = True
+
             get_video(message)
         
