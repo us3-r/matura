@@ -23,8 +23,10 @@ def get_video(select :str):
     #print(path)
     if path is not None: 
         os.system(f"vlc --play-and-exit {path}")
-        return True
-Start.init_check()
+        print("sleeping...")
+        time.sleep(10)
+        print("awake")
+#Start.init_check()
 
 while True:
     if ser.in_waiting > 0:
@@ -36,6 +38,4 @@ while True:
         with open("log.log", "a") as file:
             file.write(log_rep)
         get_video(message)
-        print("sleeping...")
-        time.sleep(10)
-        print("awake")
+        
