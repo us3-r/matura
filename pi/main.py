@@ -14,7 +14,11 @@ ser.write('Hello from Raspberry Pi!'.encode())
 # 4. funkcija k bo komunicirala z arduinotom (če se tm zazna da se ksn gumb prtisne da se to poročin in posledično predvaja simulacija)
 def do_smthing(v):
     if v == "1":
-        print("vrata so bla bla")
+        print("vrata so bla bla odprta")
+        import time
+        time.sleep(5)
+    elif v=="0":
+        print("vrata so bla bla zaprta")
         import time
         time.sleep(5)
     else:pass
