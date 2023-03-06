@@ -19,7 +19,7 @@ def get_video(select :str):
         "inv",
         "sr"
     ]
-    path = f"anim/{select}.mp4" if select in gate_list else None
+    path = f"/home/pi/matura/anim/{select}.mp4" if select in gate_list else None
     #print(path)
     if path is not None: 
         os.system(f"vlc --play-and-exit {path}")
