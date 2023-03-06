@@ -35,5 +35,7 @@ while True:
         log_rep = f"[ at {ct} ]\nSerial data: {ser}\nDecoded message: {message}\n"
         with open("log.log", "a") as file:
             file.write(log_rep)
-        if (get_video(message)):
-            time.sleep(7)
+        get_video(message)
+        print("sleeping...")
+        time.sleep(10)
+        print("awake")
